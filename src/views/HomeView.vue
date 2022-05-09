@@ -149,7 +149,7 @@
 
 				await axios
 					.post(
-						`https://schot-zoho.netlify.app/writer/officeapi/v1/documents`,
+						`https://api.office-integrator.com/writer/officeapi/v1/documents`,
 						form,
 						{
 							"content-type":
@@ -195,7 +195,7 @@
 				console.log(value);
 				await axios
 					.delete(
-						`https://schot-zoho.netlify.app/writer/officeapi/v1/documents/${doc_id}?apikey=775496a72e37908527d83f710d1abbcd`,
+						`https://api.office-integrator.com/writer/officeapi/v1/documents/${doc_id}?apikey=775496a72e37908527d83f710d1abbcd`,
 						{
 							"content-type":
 								"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
