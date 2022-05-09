@@ -148,10 +148,14 @@
 				);
 
 				await axios
-					.post(`http://localhost:8080/writer/officeapi/v1/documents`, form, {
-						"content-type":
-							"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
-					})
+					.post(
+						`https://schot-zoho.netlify.app/writer/officeapi/v1/documents`,
+						form,
+						{
+							"content-type":
+								"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
+						}
+					)
 					.then((response) => {
 						console.log(response);
 						data.value = response.data;
@@ -191,7 +195,7 @@
 				console.log(value);
 				await axios
 					.delete(
-						`http://localhost:8080/writer/officeapi/v1/documents/${doc_id}?apikey=775496a72e37908527d83f710d1abbcd`,
+						`https://schot-zoho.netlify.app/writer/officeapi/v1/documents/${doc_id}?apikey=775496a72e37908527d83f710d1abbcd`,
 						{
 							"content-type":
 								"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",

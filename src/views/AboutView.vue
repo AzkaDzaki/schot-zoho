@@ -61,10 +61,14 @@
 				form.append("document", this.file);
 
 				await axios
-					.post(`http://localhost:8080/writer/officeapi/v1/documents`, form, {
-						"content-type":
-							"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
-					})
+					.post(
+						`https://schot-zoho.netlify.app/writer/officeapi/v1/documents`,
+						form,
+						{
+							"content-type":
+								"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
+						}
+					)
 					.then((response) => {
 						console.log(response);
 						this.data = response.data;
